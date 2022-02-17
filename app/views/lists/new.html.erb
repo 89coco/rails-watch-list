@@ -1,0 +1,7 @@
+<div class="container" style="display: centre; padding-top: 20px">
+<%= simple_form_for [ @list ] do |f| %>
+  <%= f.input :name %>
+  <%= f.association :movie, collection: Movie.active.order(:name), prompt: "Choose a Movie"  %>
+  <%= f.submit "Submit list", class: "btn btn-primary" %>
+<% end %>
+</div>

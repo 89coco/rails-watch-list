@@ -1,0 +1,7 @@
+<h1>Here is a list of movie genres:</h1>
+<% @lists.each do |list| %>
+  <ul>
+  <li><%= list.name %><%= link_to "new bookmark", new_list_bookmark_path(list) %></li>
+  </ul>
+  <% end %>
+<p><%= link_to "create new list", new_list_path %></p>
