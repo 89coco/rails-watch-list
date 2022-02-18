@@ -7,7 +7,6 @@ before_action :set_list, only: [:show, :destroy]
 
   def show
     @bookmark = Bookmark.new
-    @review = Review.new(list: @list)
   end
 
   def new
